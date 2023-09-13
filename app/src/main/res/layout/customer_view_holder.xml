@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <TextView
+        android:id="@+id/custNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[Cust Name]"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/priceGroupLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pricing: "
+        app:layout_constraintTop_toBottomOf="@id/custNameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <Spinner
+        android:id="@+id/priceGroupSpn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/price_group"
+        app:layout_constraintTop_toBottomOf="@id/custNameTV"
+        app:layout_constraintStart_toEndOf="@id/priceGroupLbl"
+        />
+
+    <TextView
+        android:id="@+id/paymentTypeLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Type: "
+        app:layout_constraintTop_toBottomOf="@id/priceGroupSpn"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <Spinner
+        android:id="@+id/paymentTypeSpn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/payment_type"
+        app:layout_constraintTop_toBottomOf="@id/priceGroupSpn"
+        app:layout_constraintStart_toEndOf="@id/paymentTypeLbl"
+        />
+
+    <TextView
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Edit "
+        android:background="@drawable/background_button"
+        app:layout_constraintTop_toBottomOf="@id/paymentTypeSpn"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/historyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" History "
+        android:visibility="gone"
+        android:background="@drawable/background_button"
+        app:layout_constraintTop_toBottomOf="@id/paymentTypeSpn"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/driverNameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="def"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/deliveringDateTV"
+        app:layout_constraintWidth_percent="0.3"
+        android:background="@color/grayBg"
+        />
+
+    <TextView
+        android:id="@+id/deliveringDateTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="8gi"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/driverNameTV"
+        app:layout_constraintWidth_percent="0.7"
+        android:background="@color/dateColor"
+        />
+
+    <Spinner
+        android:id="@+id/bundleSizeSpn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/driverNameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        />
+
+    <TextView
+        android:id="@+id/minusADayBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" &#60; "
+        android:textAlignment="center"
+        android:background="@drawable/background_date_button"
+        app:layout_constraintTop_toBottomOf="@id/driverNameTV"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintStart_toEndOf="@id/bundleSizeSpn"
+        />
+
+    <TextView
+        android:id="@+id/plusADayBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" &#62; "
+        android:textAlignment="center"
+        android:background="@drawable/background_date_button"
+        app:layout_constraintTop_toBottomOf="@id/driverNameTV"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintStart_toEndOf="@id/minusADayBtn"
+        />
+
+    <TextView
+        android:id="@+id/deliveriesSummaryTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No deliveries made"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:background="@color/doneCol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minusADayBtn" />
+
+    <RadioGroup
+        android:id="@+id/currentHistoryRG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/deliveriesSummaryTV"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/currentRB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_margin="3dp"
+            android:checked="true"
+            android:text="Current" />
+
+        <RadioButton
+            android:id="@+id/historyRB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_margin="3dp"
+            android:background="@color/doneCol"
+            android:text="History" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/noOrdersMsgTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Current Orders"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/currentHistoryRG"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ordersRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="6dp"
+        app:layout_constraintBottom_toTopOf="@id/deleteOrdersBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentHistoryRG" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/historyCL"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/currentHistoryRG"
+        app:layout_constraintBottom_toTopOf="@id/deleteOrdersBtn">
+
+        <Spinner
+            android:id="@+id/customerNameSpn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/historyCL"/>
+
+        <Spinner
+            android:id="@+id/bundleSizeFilterSpn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/customerNameSpn"/>
+
+        <TextView
+            android:id="@+id/dateFilterTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Del Date: All"
+            android:background="@drawable/background_done_btn"
+            app:layout_constraintTop_toBottomOf="@id/bundleSizeFilterSpn"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/deliveredRV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/dateFilterTV"
+            app:layout_constraintBottom_toBottomOf="@id/historyCL"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/deleteOrdersBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Remove "
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/unpaidCol"
+        android:background="@drawable/background_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/assignBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Assign "
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/background_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/deleteOrdersBtn"
+        app:layout_constraintEnd_toStartOf="@id/newOrderBtn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/newOrderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" New "
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/button_color"
+        android:background="@drawable/background_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

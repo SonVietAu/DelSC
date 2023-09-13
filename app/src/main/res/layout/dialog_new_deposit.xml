@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_unassigned_background"
+    >
+
+    <Spinner
+        android:id="@+id/driversSpn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/wrxBlue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Spinner
+        android:id="@+id/depositedDatetimeSpn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/button_color"
+        android:background="@drawable/background_button"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/driversSpn"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deposit Amount: "
+        app:layout_constraintBottom_toBottomOf="@id/amountET"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/amountET"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        android:selectAllOnFocus="true"
+        android:textAlignment="textEnd"
+        app:layout_constraintTop_toBottomOf="@id/depositedDatetimeSpn"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Earning Taken: "
+        app:layout_constraintBottom_toBottomOf="@id/earningTakenET"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/earningTakenET"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        android:selectAllOnFocus="true"
+        android:textAlignment="textEnd"
+        app:layout_constraintTop_toBottomOf="@id/amountET"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Petty Expense: "
+        app:layout_constraintBottom_toBottomOf="@id/pettyCashET"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/pettyCashET"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionDone"
+        android:textAlignment="textEnd"
+        app:layout_constraintTop_toBottomOf="@id/earningTakenET"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous Bal: "
+        app:layout_constraintBottom_toBottomOf="@id/previousBalTV"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/previousBalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/pettyCashET"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Cash Collection: "
+        app:layout_constraintBottom_toBottomOf="@id/currentCollectionTV"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/currentCollectionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/previousBalTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Bal: "
+        app:layout_constraintBottom_toBottomOf="@id/currentBalTV"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/currentBalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/currentCollectionTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: "
+        app:layout_constraintBottom_toBottomOf="@id/statusTV"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/statusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Draft"
+        android:paddingEnd="6dp"
+        android:paddingStart="6dp"
+        android:background="@drawable/background_unassigned_btn"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/currentBalTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/undepositedOrdersRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/alek"
+        android:clickable="false"
+        app:layout_constraintTop_toBottomOf="@id/statusTV"
+        app:layout_constraintBottom_toTopOf="@id/saveBtn"
+        />
+
+    <TextView
+        android:id="@+id/cancelTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Cancel "
+        android:textSize="24sp"
+        android:textColor="@color/error_color"
+        android:background="@drawable/background_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Save Draft "
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/button_color"
+        android:background="@drawable/background_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/driversMenuItem"
+        android:title="Drivers"/>
+
+    <item android:id="@+id/customersMenuItem"
+        android:title="Customers"/>
+
+    <item android:id="@+id/pricesMenuItem"
+        android:title="Prices"/>
+
+    <item android:id="@+id/depositsMenuItem"
+        android:title="Deposits"/>
+
+</menu>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:paddingBottom="6dp"
+    android:background="@drawable/background_unassigned_background">
+
+    <TextView
+        android:id="@+id/custNameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dp"
+        app:layout_constraintEnd_toStartOf="@id/ordered15kgTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ordered15kgTV"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/background_fifteen_kg_btn"
+        android:text=" 0 "
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/ordered10kgTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ordered10kgTV"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/background_ten_kg_btn"
+        android:text=" 0 "
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/assigneeTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/assigneeTV"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:textAlignment="center"
+        android:background="@drawable/background_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reqDelDateLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dp"
+        android:text=" [Request Date] "
+        app:layout_constraintTop_toBottomOf="@id/custNameTV"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/doneCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reqDelDateLbl">
+
+        <TextView
+            android:id="@+id/deliveredLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="Del: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/doneCL" />
+
+        <TextView
+            android:id="@+id/delivered15KgTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="15kg: "
+            android:background="@drawable/background_fifteen_kg_hint"
+            app:layout_constraintStart_toEndOf="@id/deliveredLbl"
+            app:layout_constraintTop_toTopOf="@id/doneCL" />
+
+        <EditText
+            android:id="@+id/delivered15kgET"
+            android:layout_width="60dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            app:layout_constraintStart_toEndOf="@id/delivered15KgTV"
+            app:layout_constraintTop_toTopOf="@id/doneCL" />
+
+        <TextView
+            android:id="@+id/fifteenKgDollarValueTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/background_fifteen_kg_hint"
+            app:layout_constraintStart_toEndOf="@id/delivered15kgET"
+            app:layout_constraintTop_toTopOf="@id/doneCL" />
+
+        <TextView
+            android:id="@+id/delivered10kgTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text=" 10kg: "
+            android:visibility="gone"
+            android:background="@drawable/background_ten_kg_hint"
+            app:layout_constraintStart_toEndOf="@id/deliveredLbl"
+            app:layout_constraintTop_toBottomOf="@id/delivered15kgET" />
+
+        <EditText
+            android:id="@+id/delivered10kgET"
+            android:layout_width="60dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/delivered10kgTV"
+            app:layout_constraintTop_toBottomOf="@id/delivered15kgET" />
+
+        <TextView
+            android:id="@+id/tenKgDollarValueTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:visibility="gone"
+            android:background="@drawable/background_ten_kg_hint"
+            app:layout_constraintStart_toEndOf="@id/delivered10kgET"
+            app:layout_constraintTop_toBottomOf="@id/delivered15kgET" />
+
+        <TextView
+            android:id="@+id/delDateTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Del date: today"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delivered10kgET"
+            />
+
+        <Switch
+            android:id="@+id/paidSwt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:checked="false"
+            android:text="Paid:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delDateTimeTV" />
+
+        <TextView
+            android:id="@+id/deleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/background_button"
+            android:text=" Remove "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paidSwt" />
+
+        <TextView
+            android:id="@+id/doneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:background="@drawable/background_done_btn"
+            android:text=" Delivered "
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paidSwt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

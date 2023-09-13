@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delivered Orders: "
+        android:background="@color/doneCol"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/deliveringDateTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mon 21st Aug"
+        android:background="@color/dateColor"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/minusADayBtn"/>
+
+    <TextView
+        android:id="@+id/minusADayBtn"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text=" &#60; "
+        android:textAlignment="center"
+        android:background="@drawable/background_date_button"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        app:layout_constraintEnd_toStartOf="@id/plusADayBtn"
+        />
+
+    <TextView
+        android:id="@+id/plusADayBtn"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text=" &#62; "
+        android:textAlignment="center"
+        android:background="@drawable/background_date_button"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/deliveriesSummaryTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A deliveries summary here, total deliveries, total amount of 15 and 10 kg, total money collected, total unpaid"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:background="@color/doneCol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deliveringDateTV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/deliveredRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/reportBtn"
+        app:layout_constraintTop_toBottomOf="@id/deliveriesSummaryTV" />
+
+    <TextView
+        android:id="@+id/reportBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Report "
+        android:background="@drawable/background_button"
+        android:layout_margin="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

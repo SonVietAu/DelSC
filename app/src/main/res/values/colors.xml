@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="off_white">#EDE7D2</color>
+    <color name="button_color">#09ED70</color>
+
+    <color name="text_color_primary">#111111</color>
+    <color name="text_color_secondary">#222222</color>
+    <color name="text_color_tertiary">#333333</color>
+    <color name="text_color_label">#777777</color>
+    <color name="grayBg">#DDDDDD</color>
+    <color name="darkBg">#756F6F</color>
+
+    <color name="error_color">#D83C28</color>
+
+    <color name="wrxBlue">#0678F7</color>
+    <color name="wrxBlueDisabled">#36A8F7</color>
+
+    <color name="dateColor">#8DD0FF</color>
+
+    <color name="fifteen_kg_col">#FFEB3B</color>
+    <color name="ten_kg_col">#A1F5D3</color>
+    <color name="stockCol">#BF815F</color>
+    <color name="orderingHintCol">#FBF18C</color>
+    <color name="ten_kg_hint_col">#C2F3DF</color>
+    <color name="stockHintCol">#88BF815F</color>
+
+    <color name="pastDateCol">#888888</color>
+    <color name="futureDateCol">#E86868</color>
+
+    <color name="unassigned">#DDDDDD</color>
+    <color name="doneCol">#C0F783</color>
+    <color name="unpaidCol">#FA4E4E</color>
+    <color name="paidCol">#079101</color>
+
+    <color name="dad">#FFC107</color>
+    <color name="ha">#935CF6</color>
+    <color name="me">#95EA32</color>
+    <color name="alek">#19C4DA</color>
+
+</resources>

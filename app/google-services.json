@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "670127899818",
+    "firebase_url": "https://sugar-cane-delivery-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "sugar-cane-delivery",
+    "storage_bucket": "sugar-cane-delivery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670127899818:android:42a86581c6de29a4e17cd3",
+        "android_client_info": {
+          "package_name": "com.delsc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670127899818-dqdnmeih89c8601ua5u953v2pm7amaq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW2TsBRLD_HQB2khzue5KPrnDo-WMyka8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670127899818-dqdnmeih89c8601ua5u953v2pm7amaq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670127899818:android:2d83909c27988bf1e17cd3",
+        "android_client_info": {
+          "package_name": "com.delsc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670127899818-dqdnmeih89c8601ua5u953v2pm7amaq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW2TsBRLD_HQB2khzue5KPrnDo-WMyka8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670127899818-dqdnmeih89c8601ua5u953v2pm7amaq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

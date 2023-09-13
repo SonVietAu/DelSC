@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_unassigned_background">
+
+    <CheckBox
+        android:id="@+id/selectionChb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/custNameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/selectionChb"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ordered15kgTV"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/background_fifteen_kg_btn"
+        android:text=" 0 "
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/ordered10kgTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ordered10kgTV"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/background_ten_kg_btn"
+        android:text=" 0 "
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/assigneeTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/assigneeTV"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:textAlignment="center"
+        android:background="@drawable/background_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reqDelDateLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dp"
+        android:text=" [Request Date] "
+        app:layout_constraintTop_toBottomOf="@id/assigneeTV"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

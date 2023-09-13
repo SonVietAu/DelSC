@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deposits"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/paidCol"
+        />
+
+    <TextView
+        android:id="@+id/noDepositsMsgTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please wait, loading deposits"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/depositsRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clickable="false"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        app:layout_constraintBottom_toTopOf="@id/linkedOrdersRV"
+        app:layout_constraintVertical_weight="0.5"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/linkedOrdersRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/alek"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/depositsRV"
+        app:layout_constraintBottom_toTopOf="@id/newDepositBtn"
+        app:layout_constraintVertical_weight="0.36"
+        />
+
+    <TextView
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/unpaidCol"
+        android:background="@drawable/background_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/newDepositBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" New "
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/button_color"
+        android:background="@drawable/background_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

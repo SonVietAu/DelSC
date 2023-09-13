@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DelSC</string>
+
+    <string-array name="price_group">
+        <item>Cabramatta</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="payment_type">
+        <item>COD</item>
+        <item>Transfer</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
